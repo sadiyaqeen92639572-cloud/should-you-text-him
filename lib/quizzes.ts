@@ -914,4 +914,4 @@ export function getQuiz(slug: string): QuizData | undefined {
   return QUIZZES.find((q) => q.slug === slug)
 }
 
-export const QUIZ_SITE_URL = 'https://shoulditext.co'
+export const QUIZ_SITE_URL = 'https://textorwait.com'

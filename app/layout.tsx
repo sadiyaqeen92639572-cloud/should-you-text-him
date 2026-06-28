@@ -8,7 +8,7 @@ const spaceGrotesk = Space_Grotesk({
   variable: '--font-space-grotesk',
 });
 
-const SITE_URL = 'https://should-you-text-him.pages.dev'
+const SITE_URL = 'https://textorwait.com'
 
 export const metadata: Metadata = {
   title: 'Should I Text Him? Instant Yes or No for Ex, Crush, Goodnight & Ghosting',

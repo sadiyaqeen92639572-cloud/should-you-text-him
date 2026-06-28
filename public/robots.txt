@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://should-you-text-him.pages.dev/sitemap.xml
+Sitemap: https://textorwait.com/sitemap.xml
