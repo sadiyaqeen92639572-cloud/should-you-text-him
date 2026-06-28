@@ -1,0 +1,6 @@
+{
+  "name": "Should I Text Him?",
+  "description": "An instant yes/no decision tool for texting dilemmas",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
