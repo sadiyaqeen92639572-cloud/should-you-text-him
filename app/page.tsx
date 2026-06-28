@@ -165,6 +165,7 @@ export default function ShouldITextPage() {
   // Sub-quiz state
   const [activeSubQuiz, setActiveSubQuiz] = useState<QuizData | null>(null);
   const subQuizRef = useRef<HTMLElement>(null);
+  const subQuizHeaderRef = useRef<HTMLDivElement>(null);
 
   // Toast notifier
   const [showToast, setShowToast] = useState<boolean>(false);
@@ -174,8 +175,8 @@ export default function ShouldITextPage() {
     if (!quiz) return;
     setActiveSubQuiz(quiz);
     setTimeout(() => {
-      subQuizRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }, 50);
+      subQuizHeaderRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 80);
   };
 
   // Read stored values safely on client-side after mount
@@ -526,7 +527,7 @@ export default function ShouldITextPage() {
                 className="mb-6"
               >
                 {/* Header */}
-                <div className="flex items-center justify-between bg-[#FFD93D] border-4 border-black p-4 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] mb-4">
+                <div ref={subQuizHeaderRef} className="flex items-center justify-between bg-[#FFD93D] border-4 border-black p-4 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] mb-4">
                   <div>
                     <div className="inline-block bg-black text-white px-2 py-0.5 font-extrabold uppercase text-[10px] tracking-wider border border-black mb-1">
                       🔮 SPECIFIC QUIZ
