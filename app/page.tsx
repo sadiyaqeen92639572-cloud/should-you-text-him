@@ -65,6 +65,22 @@ const FAQ_ITEMS: FAQItem[] = [
   {
     question: "Should I text him or move on?",
     answer: "Take the 5-question quiz above! It will calculate your chaos score based on your answers and give you a brutal, honest verdict instantly. If your score is low, it's time to put the phone down and move on to better things."
+  },
+  {
+    question: "Should I text him after a week of silence?",
+    answer: "A week of silence is long enough to feel deliberate — but not always. If your last conversation ended well and his usual pattern isn't radio silence, one casual message is fair game. If he regularly disappears, reaching out just confirms he can keep doing it."
+  },
+  {
+    question: "Should I text him or leave him alone?",
+    answer: "Look at the effort ratio. If you've been the one initiating every time and getting minimal back, leaving him alone is the power move. Silence reveals intention — his and yours. Use our quiz to get a read on your specific situation."
+  },
+  {
+    question: "Should I text him I miss him?",
+    answer: "Only if the feeling has been consistent for days — not if it hit you at midnight after three glasses of wine. 'I miss you' puts all the cards on the table, so make sure the situation can handle that kind of honesty before you send it."
+  },
+  {
+    question: "I miss my ex — should I text him?",
+    answer: "Missing your ex is normal. Acting on it without thinking is where it gets painful. The key question: do you miss HIM specifically, or do you miss having someone? If it's the latter, no text will fix that feeling. Take the quiz to find out which one it really is."
   }
 ];
 
@@ -390,6 +406,10 @@ export default function ShouldITextPage() {
     'his-birthday',
     'left-on-read',
     'or-move-on',
+    'after-week-silence',
+    'or-leave-alone',
+    'i-miss-him',
+    'miss-ex',
   ]
 
   // Structured Schema markup for search engines
@@ -430,6 +450,10 @@ export default function ShouldITextPage() {
           { "@type": "ListItem", "position": 8,  "name": "Should I Text Him On His Birthday?",           "url": `${SITE_URL}/quiz/his-birthday` },
           { "@type": "ListItem", "position": 9,  "name": "Should I Text Him After He Left Me On Read?",  "url": `${SITE_URL}/quiz/left-on-read` },
           { "@type": "ListItem", "position": 10, "name": "Should I Text Him Or Move On?",                "url": `${SITE_URL}/quiz/or-move-on` },
+          { "@type": "ListItem", "position": 11, "name": "Should I Text Him After a Week of Silence?",   "url": `${SITE_URL}/quiz/after-week-silence` },
+          { "@type": "ListItem", "position": 12, "name": "Should I Text Him or Leave Him Alone?",        "url": `${SITE_URL}/quiz/or-leave-alone` },
+          { "@type": "ListItem", "position": 13, "name": "Should I Text Him I Miss Him?",                "url": `${SITE_URL}/quiz/i-miss-him` },
+          { "@type": "ListItem", "position": 14, "name": "I Miss My Ex — Should I Text Him?",            "url": `${SITE_URL}/quiz/miss-ex` },
         ]
       }
     ]

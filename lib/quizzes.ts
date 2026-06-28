@@ -641,6 +641,273 @@ export const QUIZZES: QuizData[] = [
       { minScore: -99, verdict: 'MOVE ON 💨', color: '#FF6B6B', dark: true, sub: 'You already know the answer. You\'ve known for a while. The text won\'t change anything — it\'ll just delay the inevitable. Delete the draft. Go touch grass.' },
     ],
   },
+  {
+    slug: 'after-week-silence',
+    title: 'Should I Text Him After a Week of Silence?',
+    metaTitle: 'Should I Text Him After a Week of Silence? — Instant Quiz',
+    metaDescription: 'A week of silence. Should you break it or hold the line? Answer 4 brutally honest questions and get an instant verdict on whether reaching out is smart — or self-sabotage.',
+    intro: 'Seven days of silence is long enough to feel like a message in itself. Let\'s figure out what your message back should be.',
+    faqAnswer: 'A week of silence can mean many things: he\'s busy, he\'s pulling away, or he\'s waiting to see if you\'ll reach out first. The right move depends on your history, your last exchange, and what you actually want. This quiz helps you decode it.',
+    questions: [
+      {
+        id: 1,
+        text: 'What was the last thing said between you two?',
+        options: [
+          { text: '✅ A positive conversation that ended naturally', score: 2 },
+          { text: '😐 Something neutral — no real ending', score: 0 },
+          { text: '😬 It ended kind of awkwardly', score: -2 },
+          { text: '💥 An argument or tense moment', score: -3 },
+        ],
+      },
+      {
+        id: 2,
+        text: 'Who went silent first — you or him?',
+        options: [
+          { text: '🤐 He went quiet on me out of nowhere', score: -2 },
+          { text: '😶 I kind of pulled back and he matched my energy', score: 0 },
+          { text: '🤝 Neither of us — the conversation just faded', score: 1 },
+          { text: '⏸️ We agreed to take some space', score: 2 },
+        ],
+      },
+      {
+        id: 3,
+        text: 'What is his normal texting behavior?',
+        options: [
+          { text: '📱 Usually consistent — a week is unusual for him', score: 2 },
+          { text: '🌡️ Hot and cold — this is part of his pattern', score: -2 },
+          { text: '🐢 Always a slow texter — this is just him', score: 1 },
+          { text: '🔇 He regularly disappears without explanation', score: -3 },
+        ],
+      },
+      {
+        id: 4,
+        text: 'Why do you want to text him right now?',
+        options: [
+          { text: '📣 I have something specific and real to say', score: 3 },
+          { text: '🧠 I want to understand why things went quiet', score: 1 },
+          { text: '😢 I miss him and can\'t handle the silence', score: -2 },
+          { text: '🎰 I want to see if he\'s still interested', score: -1 },
+        ],
+      },
+    ],
+    verdicts: [
+      { minScore: 5, verdict: 'BREAK THE SILENCE ✉️', color: '#00FF00', dark: false, sub: 'The silence is situational, not intentional. One casual, low-pressure text ends the ambiguity without costing you anything. Do it.' },
+      { minScore: 1, verdict: 'WAIT 48 MORE HOURS ⏳', color: '#FFD93D', dark: false, sub: 'You\'re close to having a real reason. Give it two more days. If he still hasn\'t reached out by then, you\'ll know the silence was intentional.' },
+      { minScore: -2, verdict: 'HOLD THE LINE 🚧', color: '#FFD93D', dark: false, sub: 'His pattern suggests he goes quiet when he\'s losing interest. Reaching out now confirms you\'ll always chase. Make him do the work for once.' },
+      { minScore: -99, verdict: 'THE SILENCE IS YOUR ANSWER 🔇', color: '#FF6B6B', dark: true, sub: 'A week of silence after tension isn\'t an accident. Texting him now won\'t fix what caused the quiet — it just delays you from accepting it.' },
+    ],
+    textSuggestions: [
+      'hey — been a minute. How are you actually doing?',
+      'thought of you — [specific reference to something you talked about]',
+      'ok I know we\'ve both been quiet. Can we just talk?',
+    ],
+  },
+
+  {
+    slug: 'or-leave-alone',
+    title: 'Should I Text Him or Leave Him Alone?',
+    metaTitle: 'Should I Text Him or Leave Him Alone? — Instant Quiz',
+    metaDescription: 'Should you text him or leave him alone? This 4-question quiz gives you the brutally honest answer based on your specific situation — no guessing required.',
+    intro: 'You\'re at a crossroads: reach out and risk it, or pull back and wonder. Let\'s make this decision for you.',
+    faqAnswer: 'Sometimes the most powerful thing you can do is nothing. But sometimes silence reads as disinterest. This quiz figures out which situation you\'re actually in — and tells you exactly what to do.',
+    questions: [
+      {
+        id: 1,
+        text: 'How many times have YOU initiated contact recently?',
+        options: [
+          { text: '0️⃣ Not at all — it\'s been mutual or he initiates', score: 3 },
+          { text: '1️⃣ Once or twice, that\'s it', score: 2 },
+          { text: '📊 More than him, consistently', score: -2 },
+          { text: '😬 I\'ve been the only one reaching out for weeks', score: -4 },
+        ],
+      },
+      {
+        id: 2,
+        text: 'When he does respond, what is the energy like?',
+        options: [
+          { text: '🔥 Warm, engaged, clearly interested', score: 3 },
+          { text: '😊 Normal and friendly — decent effort', score: 1 },
+          { text: '💬 Short replies, takes forever to respond', score: -1 },
+          { text: '🤖 One-word responses or pure obligation', score: -3 },
+        ],
+      },
+      {
+        id: 3,
+        text: 'What does your gut say when you imagine sending nothing?',
+        options: [
+          { text: '😌 Relief — maybe some space would actually be good', score: 2 },
+          { text: '😟 Anxious — I\'m scared he\'ll forget about me', score: -2 },
+          { text: '🤔 Unsure — I genuinely can\'t read the situation', score: 0 },
+          { text: '💪 Resolved — he should be putting in effort too', score: 3 },
+        ],
+      },
+      {
+        id: 4,
+        text: 'What are you hoping texting him achieves?',
+        options: [
+          { text: '💬 A natural, genuine conversation', score: 2 },
+          { text: '🔍 Clarity on where we actually stand', score: 1 },
+          { text: '🪝 Keep him on the hook', score: -2 },
+          { text: '❤️ Get him back', score: -3 },
+        ],
+      },
+    ],
+    verdicts: [
+      { minScore: 7, verdict: 'TEXT HIM ✅', color: '#00FF00', dark: false, sub: 'The effort is mutual and you have a good reason. You\'re not chasing — you\'re engaging. There\'s a difference. Send something casual and let it breathe.' },
+      { minScore: 3, verdict: 'ONE TEXT, THEN WAIT 📬', color: '#FFD93D', dark: false, sub: 'Send one low-key opener. Then put the phone down and wait for him to match your energy. His reply (or lack of one) tells you everything.' },
+      { minScore: -1, verdict: 'LEAVE HIM ALONE FOR NOW 🤫', color: '#FFD93D', dark: false, sub: 'The effort has been one-sided. Pull back and give him a chance to notice the silence. If he doesn\'t reach out, the decision has been made for you.' },
+      { minScore: -99, verdict: 'LEAVE HIM ALONE 🚶‍♀️', color: '#FF6B6B', dark: true, sub: 'You\'ve been doing all the work and getting minimal return. Stop. The most powerful move right now is silence. Let him feel the absence and decide what he wants.' },
+    ],
+    textSuggestions: [
+      'hey, been thinking about [shared topic]. You still into that?',
+      'random — but how are you actually doing?',
+      '[Casual callback to last conversation] — anyway, hope you\'re good',
+    ],
+  },
+
+  {
+    slug: 'i-miss-him',
+    title: 'Should I Text Him I Miss Him?',
+    metaTitle: 'Should I Text Him I Miss Him? — Instant Quiz',
+    metaDescription: 'You miss him and you want to say it. But should you? Take this 5-question quiz before you send that vulnerable text — it might just save you the cringe.',
+    intro: 'Saying "I miss you" is one of the most vulnerable texts you can send. Let\'s make sure the timing and situation are actually right.',
+    faqAnswer: '"I miss you" is a high-stakes text. It reveals everything and creates immediate pressure. Whether you should send it depends entirely on where things currently stand — and this quiz helps you figure that out in 90 seconds.',
+    questions: [
+      {
+        id: 1,
+        text: 'What is the current status between you two?',
+        options: [
+          { text: '💑 Together but going through a rough patch', score: 3 },
+          { text: '🌀 Complicated situationship or talking stage', score: 1 },
+          { text: '💔 Broken up but both of us are struggling', score: -1 },
+          { text: '🚫 Broken up and he has moved on', score: -4 },
+        ],
+      },
+      {
+        id: 2,
+        text: 'Has he given you any signal recently that he misses you too?',
+        options: [
+          { text: '💌 Yes — he\'s said it or shown it clearly', score: 3 },
+          { text: '👁️ Some small signals — nothing explicit', score: 1 },
+          { text: '🔇 No contact or signals at all', score: -2 },
+          { text: '❄️ He\'s been cold or distant lately', score: -3 },
+        ],
+      },
+      {
+        id: 3,
+        text: 'How long have you been missing him before deciding to say it?',
+        options: [
+          { text: '😢 This just hit me tonight — very fresh', score: -3 },
+          { text: '📅 A few days of genuine feeling', score: 0 },
+          { text: '📆 I\'ve felt this for weeks and it\'s real', score: 2 },
+          { text: '🧠 Long enough to know it\'s not just boredom or loneliness', score: 3 },
+        ],
+      },
+      {
+        id: 4,
+        text: 'If he doesn\'t reply or says he doesn\'t feel the same — what happens?',
+        options: [
+          { text: '😌 I\'d hurt, but I\'d respect it and move on', score: 3 },
+          { text: '😔 I\'d be devastated, but eventually okay', score: 1 },
+          { text: '💔 I\'d be destroyed for weeks', score: -2 },
+          { text: '📨 I\'d send another message explaining myself', score: -4 },
+        ],
+      },
+      {
+        id: 5,
+        text: 'Why do you want to say "I miss you" instead of just… texting him normally?',
+        options: [
+          { text: '💬 Because it\'s the most honest thing I can say', score: 2 },
+          { text: '🪝 I want him to know so he comes back', score: -1 },
+          { text: '🎭 I want to say it before I lose my nerve', score: 0 },
+          { text: '😭 I can\'t take the silence anymore', score: -3 },
+        ],
+      },
+    ],
+    verdicts: [
+      { minScore: 8, verdict: 'SAY IT 💬', color: '#00FF00', dark: false, sub: 'You\'ve earned this. The situation is right, the feeling is real, and you can handle whatever comes back. Say it simply. "I miss you" — three words. Nothing more.' },
+      { minScore: 3, verdict: 'SAY IT SOFTLY 🌙', color: '#FFD93D', dark: false, sub: 'The feeling is real but the timing is delicate. A softer opener — "I\'ve been thinking about you" — lets you test the water before diving in.' },
+      { minScore: -1, verdict: 'NOT YET 🛑', color: '#FFD93D', dark: false, sub: 'You miss the idea of him, or the timing is off. Send something casual first and see how he responds. If it\'s warm, you can say the real thing next time.' },
+      { minScore: -99, verdict: 'DON\'T SAY IT 🤐', color: '#FF6B6B', dark: true, sub: 'The vulnerability isn\'t the problem — the situation is. Saying "I miss you" right now gives him all the power in a moment where you need to protect yourself. Hold this one.' },
+    ],
+    textSuggestions: [
+      'I miss you. That\'s it — I just wanted to say it.',
+      'I\'ve been thinking about you a lot lately. How are you?',
+      'I know this is random but — I miss talking to you.',
+    ],
+  },
+
+  {
+    slug: 'miss-ex',
+    title: 'I Miss My Ex — Should I Text Him?',
+    metaTitle: 'I Miss My Ex — Should I Text Him? Instant Quiz',
+    metaDescription: 'You miss your ex and you\'re thinking about texting him. Take this 5-question quiz first — it separates genuine reconnection from late-night emotional chaos.',
+    intro: 'Missing an ex is completely normal. Acting on it without thinking it through is where people get hurt. Let\'s think it through together.',
+    faqAnswer: 'Missing your ex doesn\'t automatically mean you should text him — it means you\'re human. The question is whether the missing is a real signal or just your brain romanticizing the past. This quiz helps you tell the difference.',
+    questions: [
+      {
+        id: 1,
+        text: 'What made you miss him today specifically?',
+        options: [
+          { text: '🎵 A song, a place, or something random triggered it', score: -2 },
+          { text: '💭 I\'ve genuinely missed him consistently for weeks', score: 2 },
+          { text: '😴 It\'s late and I\'m lonely — classic combo', score: -4 },
+          { text: '🎯 A specific thing happened that made me think of him', score: 1 },
+        ],
+      },
+      {
+        id: 2,
+        text: 'When you imagine him, what do you actually miss?',
+        options: [
+          { text: '❤️ Him specifically — his personality, his humor, him as a person', score: 3 },
+          { text: '🛋️ The comfort of being in a relationship', score: -2 },
+          { text: '🌟 The beginning — the version of us that no longer exists', score: -1 },
+          { text: '🪞 Being chosen and wanted by someone', score: -2 },
+        ],
+      },
+      {
+        id: 3,
+        text: 'Why did you break up?',
+        options: [
+          { text: '📍 Timing or circumstances — not personal failures', score: 2 },
+          { text: '🌀 Things fizzled out — no big reason', score: 1 },
+          { text: '💔 Fundamental incompatibility', score: -2 },
+          { text: '🚩 He hurt me in a real way', score: -4 },
+        ],
+      },
+      {
+        id: 4,
+        text: 'Have the things that caused the breakup actually changed?',
+        options: [
+          { text: '✅ Yes — genuinely, for both of us', score: 3 },
+          { text: '🌱 I have — not sure about him', score: 1 },
+          { text: '🤷 Honestly, I don\'t know', score: -1 },
+          { text: '❌ No — nothing has changed', score: -3 },
+        ],
+      },
+      {
+        id: 5,
+        text: 'What would you want to happen if you texted him?',
+        options: [
+          { text: '💬 Start a real conversation and see if there\'s still something there', score: 2 },
+          { text: '🔄 Get back together', score: -1 },
+          { text: '🔍 Get closure so I can finally stop missing him', score: 1 },
+          { text: '😔 I don\'t know — I just don\'t want to feel this anymore', score: -3 },
+        ],
+      },
+    ],
+    verdicts: [
+      { minScore: 7, verdict: 'REACH OUT 💌', color: '#00FF00', dark: false, sub: 'You miss him for real reasons, the context is right, and things have actually changed. One genuine message won\'t hurt — and might be exactly what you both needed.' },
+      { minScore: 3, verdict: 'THINK ONE MORE DAY 🤔', color: '#FFD93D', dark: false, sub: 'The feeling seems real but make sure it\'s not circumstantial. Sleep on it once. If you still want to tomorrow morning, do it then with a clear head.' },
+      { minScore: -1, verdict: 'MISS HIM IN SILENCE 🔇', color: '#FFD93D', dark: false, sub: 'You miss the relationship more than you miss him specifically. Texting won\'t fix that feeling — it\'ll just reopen something that needs more time to close properly.' },
+      { minScore: -99, verdict: 'DON\'T TEXT HIM 🚫', color: '#FF6B6B', dark: true, sub: 'You\'re romanticizing the past or reaching out from pain, not clarity. The version of him you miss may not exist anymore — and a text tonight won\'t bring it back. Give yourself more time.' },
+    ],
+    textSuggestions: [
+      'hey — I know it\'s been a while. I\'ve been thinking about you.',
+      'I don\'t know if this is the right move but — I miss you. Thought you should know.',
+      'hi. I\'ve been missing you lately. How are you doing?',
+    ],
+  },
 ]
 
 export function getQuiz(slug: string): QuizData | undefined {
