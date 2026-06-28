@@ -430,17 +430,35 @@ export default function ShouldITextPage() {
       },
       {
         "@type": "FAQPage",
-        "mainEntity": FAQ_ITEMS.map(item => ({
-          "@type": "Question",
-          "name": item.question,
-          "acceptedAnswer": { "@type": "Answer", "text": item.answer }
-        }))
+        "mainEntity": [
+          ...FAQ_ITEMS.map(item => ({
+            "@type": "Question",
+            "name": item.question,
+            "acceptedAnswer": { "@type": "Answer", "text": item.answer }
+          })),
+          {
+            "@type": "Question",
+            "name": "Should I text him yes or no wheel — how does it work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The 'Should I Text Him Yes or No Wheel' is a free random decision spinner with 8 humorous outcomes: TEXT IT, SEND IT, DO IT, OBVIOUSLY YES (yes answers) and GIRL NO, PUT IT DOWN, STEP AWAY, ABSOLUTELY NOT (no answers). Spin it for an instant yes or no verdict. For a more accurate answer based on your real situation, use the full 5-question diagnostic above."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is there a yes or no wheel to decide if I should text him?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — textorwait.com has a free yes or no spin wheel specifically for the 'should I text him' dilemma. The wheel has alternating yes and no segments with funny labels. Click SPIN and get an instant random verdict. For a personalised answer based on context, timing, and your specific situation, take the 5-question quiz instead."
+            }
+          }
+        ]
       },
       {
         "@type": "ItemList",
         "name": "Should I Text Him — Quizzes for Every Situation",
-        "description": "10 free instant quizzes covering every texting dilemma: exes, crushes, ghosting, breakups, and more.",
-        "numberOfItems": 10,
+        "description": "14 free instant quizzes covering every texting dilemma: exes, crushes, ghosting, breakups, and more.",
+        "numberOfItems": 14,
         "itemListElement": [
           { "@type": "ListItem", "position": 1,  "name": "Should I Text My Ex After No Contact?",       "url": `${SITE_URL}/quiz/ex-no-contact` },
           { "@type": "ListItem", "position": 2,  "name": "Should I Text Him After Ghosting?",            "url": `${SITE_URL}/quiz/after-ghosting` },

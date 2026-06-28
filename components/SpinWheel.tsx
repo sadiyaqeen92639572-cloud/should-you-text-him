@@ -120,8 +120,13 @@ export default function SpinWheel() {
       <h2 className="text-2xl font-black uppercase tracking-tight mb-1 leading-none">
         Should I Text Him<br />Yes or No Wheel
       </h2>
-      <p className="text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-5">
+      <p className="text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-2">
         Too lazy to think? Let fate decide. (We warned you.)
+      </p>
+      <p className="text-xs text-gray-600 leading-relaxed mb-5">
+        Can&rsquo;t decide whether to text him? Spin the <strong>yes or no wheel</strong> for an instant answer.
+        8 outcomes — alternating yes and no — randomly selected. Want a real verdict?
+        Use the <strong>5-question diagnostic</strong> above instead.
       </p>
 
       <div className="flex flex-col items-center">
