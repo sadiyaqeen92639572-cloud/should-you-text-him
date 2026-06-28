@@ -589,6 +589,13 @@ export default function ShouldITextPage() {
                     <ArrowRight className="w-6 h-6 stroke-[3px]" />
                   </button>
 
+                  <button
+                    onClick={() => document.getElementById('spin-wheel')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+                    className="w-full mt-3 bg-white hover:bg-black hover:text-white text-black font-black uppercase tracking-wider text-sm py-3 px-6 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                  >
+                    🎡 Get a Quick Yes or No
+                  </button>
+
                   <div className="mt-5 text-center">
                     <span className="text-xs font-black uppercase text-gray-500">
                       Also works for: exes, crushes, situationships, &amp; late-night regrets

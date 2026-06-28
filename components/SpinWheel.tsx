@@ -13,6 +13,7 @@ const SEGMENTS = [
 ]
 
 const SEG_ANGLE = (Math.PI * 2) / SEGMENTS.length
+const SIZE = 280
 
 export default function SpinWheel() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -25,12 +26,11 @@ export default function SpinWheel() {
     if (!canvas) return
     const ctx = canvas.getContext('2d')
     if (!ctx) return
-    const W = canvas.width
-    const cx = W / 2
-    const cy = W / 2
-    const R = W / 2 - 5
+    const cx = SIZE / 2
+    const cy = SIZE / 2
+    const R = SIZE / 2 - 5
 
-    ctx.clearRect(0, 0, W, W)
+    ctx.clearRect(0, 0, SIZE, SIZE)
 
     SEGMENTS.forEach((seg, i) => {
       const start = rot - Math.PI / 2 + i * SEG_ANGLE
@@ -63,7 +63,7 @@ export default function SpinWheel() {
     ctx.lineWidth = 5
     ctx.stroke()
 
-    // Center disc (behind SPIN button)
+    // Center disc
     ctx.beginPath()
     ctx.arc(cx, cy, 32, 0, Math.PI * 2)
     ctx.fillStyle = '#111'
@@ -88,7 +88,6 @@ export default function SpinWheel() {
     const duration = 3500
     const startTime = performance.now()
     const startRot = rotRef.current
-
     const easeOut = (t: number) => 1 - Math.pow(1 - t, 4)
 
     const tick = (now: number) => {
@@ -113,39 +112,50 @@ export default function SpinWheel() {
   }
 
   return (
-    <section className="mt-6 bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-      <h2 className="text-xl font-black uppercase tracking-tight text-center mb-1">
-        Should I Text Him Yes or No Wheel
+    <section id="spin-wheel" className="mt-6 bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+      {/* H2 SEO */}
+      <div className="inline-block bg-black text-white px-2 py-0.5 font-extrabold uppercase text-[10px] tracking-wider border border-black mb-2">
+        🎡 QUICK DECISION
+      </div>
+      <h2 className="text-2xl font-black uppercase tracking-tight mb-1 leading-none">
+        Should I Text Him<br />Yes or No Wheel
       </h2>
-      <p className="text-[11px] font-bold text-center text-gray-500 uppercase tracking-wider mb-5">
+      <p className="text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-5">
         Too lazy to think? Let fate decide. (We warned you.)
       </p>
 
       <div className="flex flex-col items-center">
-        {/* Pointer triangle */}
-        <div className="text-2xl leading-none z-10 relative mb-[-6px]">▼</div>
+        {/* Pointer */}
+        <div className="text-2xl leading-none z-10 relative" style={{ marginBottom: -6 }}>▼</div>
 
-        {/* Wheel + centered SPIN button */}
-        <div className="relative">
+        {/* Wheel wrapper — explicit size so absolute SPIN button stays centered */}
+        <div style={{ position: 'relative', width: SIZE, height: SIZE }}>
           <canvas
             ref={canvasRef}
-            width={280}
-            height={280}
-            className="block"
+            width={SIZE}
+            height={SIZE}
+            style={{ display: 'block', width: SIZE, height: SIZE }}
           />
+          {/* SPIN button pinned to exact center */}
           <button
             onClick={spin}
             disabled={spinning}
-            className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-[62px] h-[62px] rounded-full bg-[#FFD93D] border-4 border-black font-black text-xs uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[1px] hover:translate-y-[1px] transition-all ${spinning ? 'opacity-50 cursor-not-allowed animate-none' : 'animate-pulse cursor-pointer'}`}
+            style={{
+              position: 'absolute',
+              top: SIZE / 2,
+              left: SIZE / 2,
+              transform: 'translate(-50%, -50%)',
+              width: 62,
+              height: 62,
+            }}
+            className={`rounded-full bg-[#FFD93D] border-4 border-black font-black text-xs uppercase z-20 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all ${spinning ? 'opacity-50 cursor-not-allowed' : 'animate-pulse cursor-pointer hover:shadow-none'}`}
           >
             SPIN
           </button>
         </div>
 
         {result && (
-          <div
-            className={`mt-5 w-full border-4 border-black p-4 text-center font-black uppercase text-base shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] ${result.isYes ? 'bg-[#00FF00]' : 'bg-[#FF6B6B]'}`}
-          >
+          <div className={`mt-5 w-full border-4 border-black p-4 text-center font-black uppercase text-base shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] ${result.isYes ? 'bg-[#00FF00]' : 'bg-[#FF6B6B]'}`}>
             {result.isYes
               ? "✅ THE WHEEL SAID SEND IT. DON'T BLAME US."
               : '❌ THE WHEEL SAID NO. STEP AWAY FROM THE KEYBOARD.'}
