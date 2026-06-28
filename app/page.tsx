@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import QuizEngine from '../components/QuizEngine';
+import SpinWheel from '../components/SpinWheel';
 import { getQuiz, type QuizData } from '../lib/quizzes';
 import { 
   ArrowRight, 
@@ -603,6 +604,9 @@ export default function ShouldITextPage() {
                     <span className="text-[10px] font-bold normal-case text-black/70">your future self is cringing. Sponsored by reality.</span>
                   </p>
                 </div>
+
+                {/* SPIN WHEEL */}
+                <SpinWheel />
               </motion.div>
             )}
 
