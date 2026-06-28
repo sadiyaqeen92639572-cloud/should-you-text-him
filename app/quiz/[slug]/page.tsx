@@ -18,6 +18,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: quiz.metaTitle,
     description: quiz.metaDescription,
+    alternates: { canonical: `/quiz/${quiz.slug}` },
+    openGraph: {
+      title: quiz.metaTitle,
+      description: quiz.metaDescription,
+      url: `${QUIZ_SITE_URL}/quiz/${quiz.slug}`,
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: quiz.metaTitle,
+      description: quiz.metaDescription,
+    },
   }
 }
 

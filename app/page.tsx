@@ -473,9 +473,14 @@ export default function ShouldITextPage() {
             5 questions. Instant verdict. No therapy needed.
           </p>
         </div>
-        <div className="bg-white border-4 border-black px-5 py-3 font-black uppercase text-xs md:text-sm tracking-wider shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center gap-2 self-stretch md:self-auto justify-center">
-          <span className="w-3 h-3 rounded-none bg-[#FF6B6B] border border-black animate-pulse"></span>
-          LAST VERDICT: <span className="text-[#FF6B6B] underline ml-1">{hydratedLastVerdict ? hydratedLastVerdict : "NONE YET"}</span>
+        <div className="flex flex-col items-end gap-2">
+          <span className="text-[11px] font-black uppercase tracking-widest text-black/50">
+            textorwait.com
+          </span>
+          <div className="bg-white border-4 border-black px-5 py-3 font-black uppercase text-xs md:text-sm tracking-wider shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center gap-2 justify-center">
+            <span className="w-3 h-3 rounded-none bg-[#FF6B6B] border border-black animate-pulse"></span>
+            LAST VERDICT: <span className="text-[#FF6B6B] underline ml-1">{hydratedLastVerdict ? hydratedLastVerdict : "NONE YET"}</span>
+          </div>
         </div>
       </header>
 
@@ -901,6 +906,67 @@ export default function ShouldITextPage() {
 
       </div>
 
+      {/* Algorithm Explainer */}
+      <section className="w-full mt-10 border-4 border-black bg-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+        <div className="bg-black text-white px-6 py-3 flex items-center gap-3">
+          <span className="text-lg">⚙️</span>
+          <h2 className="font-black uppercase tracking-widest text-sm">How The Algorithm Works</h2>
+          <span className="ml-auto text-[10px] font-mono text-gray-400 uppercase tracking-wider">Decision Compass v2.6</span>
+        </div>
+        <div className="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          {/* Step 1 */}
+          <div className="border-4 border-black p-4 bg-[#F4F4F1]">
+            <div className="bg-[#FFD93D] border-2 border-black w-8 h-8 flex items-center justify-center font-black text-sm mb-3">1</div>
+            <h3 className="font-black uppercase text-xs tracking-wider mb-2">5 Questions → Chaos Score</h3>
+            <p className="text-xs font-medium text-gray-700 leading-relaxed">
+              Each answer carries a weighted score from <span className="font-black">−4</span> (red flag) to <span className="font-black">+3</span> (green light). Scores reflect emotional risk, timing, and motivation — not just &ldquo;do you like them.&rdquo;
+            </p>
+            <div className="mt-3 space-y-1 font-mono text-[10px]">
+              <div className="flex justify-between"><span>Genuine reason to connect</span><span className="text-[#00AA00] font-black">+3</span></div>
+              <div className="flex justify-between"><span>It&apos;s late and I&apos;m bored</span><span className="text-[#FF6B6B] font-black">−3</span></div>
+              <div className="flex justify-between"><span>They ghosted me</span><span className="text-[#FF6B6B] font-black">−3</span></div>
+              <div className="flex justify-between"><span>I&apos;d send a follow-up immediately</span><span className="text-[#FF6B6B] font-black">−4</span></div>
+            </div>
+          </div>
+
+          {/* Step 2 */}
+          <div className="border-4 border-black p-4 bg-[#F4F4F1]">
+            <div className="bg-[#00FF00] border-2 border-black w-8 h-8 flex items-center justify-center font-black text-sm mb-3">2</div>
+            <h3 className="font-black uppercase text-xs tracking-wider mb-2">Score Thresholds → Verdict</h3>
+            <p className="text-xs font-medium text-gray-700 leading-relaxed mb-3">
+              Total score (min −14, max +14) maps to 5 verdict zones. Each zone has a colour, a verdict, and tailored SMS suggestions.
+            </p>
+            <div className="space-y-1.5 font-mono text-[10px]">
+              <div className="flex items-center gap-2"><span className="w-3 h-3 bg-[#00FF00] border border-black shrink-0"></span><span>≥ 9 → SEND IT 🔥</span></div>
+              <div className="flex items-center gap-2"><span className="w-3 h-3 bg-[#FFD93D] border border-black shrink-0"></span><span>≥ 5 → YES, BUT MAKE IT GOOD</span></div>
+              <div className="flex items-center gap-2"><span className="w-3 h-3 bg-[#FFD93D] border border-black shrink-0"></span><span>≥ 1 → WAIT 24 HOURS ⏳</span></div>
+              <div className="flex items-center gap-2"><span className="w-3 h-3 bg-[#FF6B6B] border border-black shrink-0"></span><span>≥ −2 → PUT THE PHONE DOWN</span></div>
+              <div className="flex items-center gap-2"><span className="w-3 h-3 bg-[#FF6B6B] border border-black shrink-0"></span><span>&lt; −2 → ABSOLUTELY NOT 💀</span></div>
+            </div>
+          </div>
+
+          {/* Step 3 */}
+          <div className="border-4 border-black p-4 bg-[#F4F4F1]">
+            <div className="bg-[#FF6B6B] border-2 border-black w-8 h-8 flex items-center justify-center font-black text-sm mb-3 text-white">3</div>
+            <h3 className="font-black uppercase text-xs tracking-wider mb-2">Context Modifier → SMS Templates</h3>
+            <p className="text-xs font-medium text-gray-700 leading-relaxed mb-3">
+              Q1 (who is this person?) adjusts the SMS templates shown. Ghosters get a red-flag warning instead of templates. Exes, crushes, and situationships each get specific copy.
+            </p>
+            <div className="space-y-1 font-mono text-[10px] text-gray-600">
+              <div>💔 Ex → careful, low-stakes openers</div>
+              <div>💘 Crush → playful, short, specific</div>
+              <div>👫 Seeing → casual, direct</div>
+              <div>👻 Ghoster → 🚩 Red Flag Warning</div>
+            </div>
+            <div className="mt-3 border-t-2 border-dashed border-black pt-2 text-[9px] font-mono text-gray-400 uppercase tracking-wider">
+              No data stored · No account required · Pure client-side logic
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="w-full text-center mt-12 pt-6 border-t-4 border-black flex flex-col items-center gap-2">
         <span className="text-xs font-extrabold uppercase text-gray-600 tracking-widest">
@@ -911,6 +977,9 @@ export default function ShouldITextPage() {
         </span>
         <span className="text-[10px] font-bold uppercase text-gray-500 tracking-wider">
           Made for highly indecisive people everywhere
+        </span>
+        <span className="text-[11px] font-black uppercase tracking-widest text-black/30 mt-1">
+          textorwait.com
         </span>
       </footer>
 
