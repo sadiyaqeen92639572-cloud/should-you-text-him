@@ -33,6 +33,10 @@
 
 **[textorwait.com](https://textorwait.com/)** — the full quiz suite with SMS templates and spin wheel.
 
+## Need a Quick Answer Right Now?
+
+Before diving into the full 14-quiz suite, the **[Should I Text Him Quiz — 4-Question Situational Checker](https://sadiyaqeen92639572-cloud.github.io/should-i-text-quiz/)** gives a fast verdict (Text Now / Wait / Don't Text) based on your specific situation: how long since you last talked, who sent the last message, how it ended, and why you want to text. Built on the same decision logic as textorwait.com — useful when you need an answer in under 60 seconds without going through a full quiz flow.
+
 ## Stack
 
 - Next.js 15 App Router + TypeScript + Tailwind CSS
