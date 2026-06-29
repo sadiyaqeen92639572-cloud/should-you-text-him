@@ -1,20 +1,41 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Should I Text Him — Quiz App
 
-# Run and deploy your AI Studio app
+**[→ Take the Quiz at textorwait.com](https://textorwait.com/)**
 
-This contains everything you need to run your app locally.
+14 situation-specific quizzes that answer the question everyone has Googled at 11pm: should I text him? Each quiz gives a clear verdict — Text Now, Wait, or Don't Text — with SMS templates based on your result.
 
-View your app in AI Studio: https://ai.studio/apps/21dace99-5f05-4450-a0c8-10ae6abcdb0a
+## Quiz Situations Covered
 
-## Run Locally
+- Should I text my ex after no contact?
+- Should I text him after he ghosted me?
+- Should I text him back?
+- Should I text him first after a breakup?
+- Should I text my ex goodnight?
+- Should I text my crush first?
+- What should I text my crush?
+- Should I text him on his birthday?
+- Should I text him after he left me on read?
+- Should I text him or move on?
+- Should I text him after a week of silence?
+- Should I text him or leave him alone?
+- Should I text him I miss him?
+- I miss my ex — should I text him?
 
-**Prerequisites:**  Node.js
+## Features
 
+- **14 dedicated quizzes** — each with 3-5 questions specific to the situation
+- **Verdict system** — Text Now / Wait / Don't Text with clear reasoning
+- **SMS templates** — actual text message suggestions based on your verdict
+- **Yes/No Spin Wheel** — quick random verdict for when you just need an answer
+- **Algorithm explainer** — transparent breakdown of how verdicts are calculated
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Live Site
+
+**[textorwait.com](https://textorwait.com/)** — the full quiz suite with SMS templates and spin wheel.
+
+## Stack
+
+- Next.js 15 App Router + TypeScript + Tailwind CSS
+- Framer Motion for quiz animations
+- Deployed via Cloudflare Pages
+- 100% static export — no server required
