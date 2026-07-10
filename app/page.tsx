@@ -929,13 +929,14 @@ export default function ShouldITextPage() {
                         <div className="p-4 font-semibold text-xs md:text-sm leading-relaxed text-gray-800 bg-white">
                           {item.answer}
                           {FAQ_QUIZ_SLUGS[idx] && (
-                            <button
-                              onClick={() => openSubQuiz(FAQ_QUIZ_SLUGS[idx])}
+                            <a
+                              href={`/quiz/${FAQ_QUIZ_SLUGS[idx]}`}
+                              onClick={(e) => { e.preventDefault(); openSubQuiz(FAQ_QUIZ_SLUGS[idx]); }}
                               className="mt-3 flex items-center gap-2 bg-[#FFD93D] border-2 border-black px-3 py-2 text-[10px] font-black uppercase tracking-wide text-black hover:bg-black hover:text-[#FFD93D] transition-colors w-fit shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] cursor-pointer"
                             >
                               <ArrowRight className="w-3 h-3 stroke-[3px]" />
                               Take the specific quiz →
-                            </button>
+                            </a>
                           )}
                         </div>
                       </motion.div>
@@ -1018,6 +1019,30 @@ export default function ShouldITextPage() {
             </div>
           </div>
 
+        </div>
+      </section>
+
+      {/* Explore All Quizzes */}
+      <section className="w-full mt-10 border-4 border-black bg-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+        <div className="bg-black text-white px-6 py-3 flex items-center gap-3">
+          <span className="text-lg">🔮</span>
+          <h2 className="font-black uppercase tracking-widest text-sm">Explore Every Quiz</h2>
+        </div>
+        <div className="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+          {FAQ_QUIZ_SLUGS.map((slug) => {
+            const quiz = getQuiz(slug);
+            if (!quiz) return null;
+            return (
+              <a
+                key={slug}
+                href={`/quiz/${slug}`}
+                className="border-2 border-black p-3 bg-[#F4F4F1] hover:bg-[#FFD93D] transition-colors font-black uppercase text-xs tracking-wide flex items-center justify-between gap-2"
+              >
+                {quiz.title}
+                <ArrowRight className="w-3 h-3 stroke-[3px] shrink-0" />
+              </a>
+            );
+          })}
         </div>
       </section>
 

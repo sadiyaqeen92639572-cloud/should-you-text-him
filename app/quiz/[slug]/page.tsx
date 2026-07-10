@@ -11,6 +11,15 @@ export async function generateStaticParams() {
   return QUIZZES.map((q) => ({ slug: q.slug }))
 }
 
+// Picks 4 other quizzes, rotated by the current quiz's index so each page
+// links to a different set rather than every page showing the same 4.
+function getRelatedQuizzes(currentSlug: string) {
+  const others = QUIZZES.filter((q) => q.slug !== currentSlug)
+  const offset = QUIZZES.findIndex((q) => q.slug === currentSlug)
+  const rotated = [...others.slice(offset), ...others.slice(0, offset)]
+  return rotated.slice(0, 4)
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const quiz = getQuiz(slug)
@@ -118,6 +127,24 @@ export default async function QuizPage({ params }: Props) {
       <main>
         <QuizEngine quiz={quiz} />
       </main>
+
+      {/* Related Quizzes */}
+      <section className="w-full mt-10 border-4 border-black bg-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+        <div className="bg-black text-white px-6 py-3">
+          <h2 className="font-black uppercase tracking-widest text-sm">More Quizzes</h2>
+        </div>
+        <div className="p-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {getRelatedQuizzes(quiz.slug).map((related) => (
+            <a
+              key={related.slug}
+              href={`/quiz/${related.slug}`}
+              className="border-2 border-black p-3 bg-[#F4F4F1] hover:bg-[#FFD93D] transition-colors font-black uppercase text-xs tracking-wide"
+            >
+              {related.title}
+            </a>
+          ))}
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="w-full text-center mt-12 pt-6 border-t-4 border-black flex flex-col items-center gap-2">
