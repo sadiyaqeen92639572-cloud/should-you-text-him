@@ -17,6 +17,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.png', type: 'image/png' },
+    ],
+  },
   openGraph: {
     title: 'Should I Text Him? Instant Yes or No',
     description: 'Should I text him first, after no contact, or after being ghosted? Get a fast yes or no answer — no therapy needed.',
@@ -24,11 +30,13 @@ export const metadata: Metadata = {
     siteName: 'Should I Text Him?',
     type: 'website',
     locale: 'en_US',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Should I Text Him? Instant Yes or No',
     description: 'Should I text him first, after no contact, or after being ghosted? Get a fast yes or no answer — no therapy needed.',
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
