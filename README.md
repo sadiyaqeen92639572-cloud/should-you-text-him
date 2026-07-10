@@ -37,6 +37,8 @@
 
 Before diving into the full 14-quiz suite, the **[Should I Text Him Quiz — 4-Question Situational Checker](https://sadiyaqeen92639572-cloud.github.io/should-i-text-quiz/)** gives a fast verdict (Text Now / Wait / Don't Text) based on your specific situation: how long since you last talked, who sent the last message, how it ended, and why you want to text. Built on the same decision logic as textorwait.com — useful when you need an answer in under 60 seconds without going through a full quiz flow.
 
+Tracking a no-contact streak instead? The **[No Contact Rule Counter](https://sadiyaqeen92639572-cloud.github.io/no-contact-rule-counter/)** counts exactly how many days you've held it and shows what that milestone typically means — pairs with the [No Contact quiz](https://textorwait.com/quiz/ex-no-contact) above for deciding whether a specific reason to break it actually holds up.
+
 ## Stack
 
 - Next.js 15 App Router + TypeScript + Tailwind CSS
