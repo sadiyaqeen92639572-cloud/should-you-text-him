@@ -45,9 +45,31 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Should I Text Him?',
+  legalName: 'Gesmine-Invest Limited',
+  url: SITE_URL,
+  identifier: { '@type': 'PropertyValue', propertyID: 'UK Company Number', value: '14120136' },
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Hardy House, 269 Poynders Gardens',
+    addressLocality: 'London',
+    postalCode: 'SW4 8PQ',
+    addressCountry: 'GB',
+  },
+};
+
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en" className={spaceGrotesk.variable}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+      </head>
       <body className="font-sans antialiased bg-[#F4F4F1] text-black overflow-x-hidden" suppressHydrationWarning>
         {children}
       </body>

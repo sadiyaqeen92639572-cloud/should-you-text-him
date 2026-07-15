@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import QuizEngine from '../components/QuizEngine';
 import SpinWheel from '../components/SpinWheel';
+import Footer from '../components/Footer';
 import { getQuiz, type QuizData } from '../lib/quizzes';
 import { 
   ArrowRight, 
@@ -1047,20 +1048,7 @@ export default function ShouldITextPage() {
       </section>
 
       {/* Footer */}
-      <footer className="w-full text-center mt-12 pt-6 border-t-4 border-black flex flex-col items-center gap-2">
-        <span className="text-xs font-extrabold uppercase text-gray-600 tracking-widest">
-          No data collected. No judgment. Just pure vibes.
-        </span>
-        <span className="text-sm font-black uppercase tracking-wider text-black">
-          © 2026 ShouldIText
-        </span>
-        <span className="text-[10px] font-bold uppercase text-gray-500 tracking-wider">
-          Made for highly indecisive people everywhere
-        </span>
-        <span className="text-[11px] font-black uppercase tracking-widest text-black/30 mt-1">
-          textorwait.com
-        </span>
-      </footer>
+      <Footer />
 
     </div>
   );

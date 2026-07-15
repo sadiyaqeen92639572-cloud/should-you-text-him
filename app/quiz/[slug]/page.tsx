@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { QUIZZES, getQuiz, QUIZ_SITE_URL } from '../../../lib/quizzes'
 import QuizEngine from '../../../components/QuizEngine'
+import Footer from '../../../components/Footer'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -146,15 +147,7 @@ export default async function QuizPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="w-full text-center mt-12 pt-6 border-t-4 border-black flex flex-col items-center gap-2">
-        <span className="text-xs font-extrabold uppercase text-gray-600 tracking-widest">
-          No data collected. No judgment. Just pure vibes.
-        </span>
-        <span className="text-sm font-black uppercase tracking-wider text-black">
-          © 2026 ShouldIText
-        </span>
-      </footer>
+      <Footer />
 
     </div>
   )
